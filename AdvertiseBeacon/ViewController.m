@@ -30,17 +30,20 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.beacons.count;
+    return self.beacons.count + 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ListPrototypeCell"
                                                             forIndexPath:indexPath];
-    NSArray *selectedBeacon = self.beacons[indexPath.row];
-    NSNumber *majorId = selectedBeacon[0];
-    NSNumber *minorId = selectedBeacon[1];
-    
-    cell.textLabel.text = [NSString stringWithFormat:@"%@/%@", majorId, minorId];
+    if (indexPath.row == 0) {
+        cell.textLabel.text = @"Stop Advertising";
+    } else {
+        NSArray *selectedBeacon = self.beacons[indexPath.row - 1];
+        NSNumber *majorId = selectedBeacon[0];
+        NSNumber *minorId = selectedBeacon[1];
+        cell.textLabel.text = [NSString stringWithFormat:@"%@ / %@", majorId, minorId];
+    }    
     return cell;
 }
 
