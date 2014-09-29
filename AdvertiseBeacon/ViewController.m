@@ -8,9 +8,15 @@
 
 #import "ViewController.h"
 
+@import CoreLocation;
+@import CoreBluetooth;
+
 @interface ViewController ()
 
 @property NSArray *beacons;
+@property CBPeripheralManager *peripheralManager;
+@property NSNumber *selectedMajorId;
+@property NSNumber *selectedMinorId;
 
 @end
 
@@ -48,7 +54,61 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == 0) {
+        [self stopAdvertisingBeacon];
+        return;
+    }
+    NSArray *selectedBeacon = self.beacons[indexPath.row - 1];
+    self.selectedMajorId = selectedBeacon[0];
+    self.selectedMinorId = selectedBeacon[1];
+    [self startAdvertisingBeacon];
+}
+
+#pragma mark - Beacon advertising delegate methods
+- (void)peripheralManagerDidStartAdvertising:(CBPeripheralManager *)peripheralManager error:(NSError *)error
+{
+    if (error) {
+        NSLog(@"Couldn't turn on advertising: %@", error);
+        return;
+    }
+}
+
+- (void)peripheralManagerDidUpdateState:(CBPeripheralManager *)peripheralManager
+{
+    if (peripheralManager.state != CBPeripheralManagerStatePoweredOn) {
+        NSLog(@"peripheralManagerDidUpdateState: Peripheral manager is off.");
+        return;
+    }
     
+    NSLog(@"Peripheral manager is on.");
+    [self startAdvertisingBeacon];
+}
+
+#pragma mark - Helpers
+
+- (void)startAdvertisingBeacon {
+    if(self.peripheralManager.isAdvertising) return;
+    if (self.peripheralManager.state != CBPeripheralManagerStatePoweredOn) {
+        NSLog(@"turnOnAdvertising: Peripheral manager is off.");
+        return;
+    }
+    
+    NSUUID *proximityUUID = [[NSUUID alloc] initWithUUIDString:@"8A216B41-DBC2-435C-9B3D-16AB00B369D3"];
+    CLBeaconRegion *region = [[CLBeaconRegion alloc] initWithProximityUUID:proximityUUID
+                                                                     major:[self.selectedMajorId integerValue]
+                                                                     minor:[self.selectedMinorId integerValue]
+                                                                identifier:@"TWAir"];
+    NSDictionary *beaconPeripheralData = [region peripheralDataWithMeasuredPower:nil];
+    [self.peripheralManager startAdvertising:beaconPeripheralData];
+    
+    NSLog(@"Turning on advertising for region: %@.", region);
+}
+
+- (void)stopAdvertisingBeacon
+{
+    [self.peripheralManager stopAdvertising];
+    
+    NSLog(@"Turned off advertising.");
 }
 
 - (void)loadBeaconArray {
