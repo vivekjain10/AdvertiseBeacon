@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UITableViewController
+@import CoreLocation;
+@import CoreBluetooth;
+
+@interface ViewController : UITableViewController <CBPeripheralManagerDelegate>
 
 
 @end

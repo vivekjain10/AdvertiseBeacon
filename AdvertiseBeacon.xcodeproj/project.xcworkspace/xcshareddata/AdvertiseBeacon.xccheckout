@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D6A64BEE-CF78-4D98-8F7A-06834A88F3E2</string>
+	<key>IDESourceControlProjectName</key>
+	<string>AdvertiseBeacon</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>8AC7E0DA9CBA359DD994710876C8278FF1BA0198</key>
+		<string>github.com:vivekjain10/AdvertiseBeacon.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>AdvertiseBeacon.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>8AC7E0DA9CBA359DD994710876C8278FF1BA0198</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:vivekjain10/AdvertiseBeacon.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>8AC7E0DA9CBA359DD994710876C8278FF1BA0198</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8AC7E0DA9CBA359DD994710876C8278FF1BA0198</string>
+			<key>IDESourceControlWCCName</key>
+			<string>AdvertiseBeacon</string>
+		</dict>
+	</array>
+</dict>
+</plist>

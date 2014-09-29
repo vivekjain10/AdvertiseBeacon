@@ -8,9 +8,6 @@
 
 #import "ViewController.h"
 
-@import CoreLocation;
-@import CoreBluetooth;
-
 @interface ViewController ()
 
 @property NSArray *beacons;
@@ -25,6 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self loadBeaconArray];
+    self.peripheralManager = [[CBPeripheralManager alloc] initWithDelegate:self queue:nil options:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -87,11 +85,13 @@
 #pragma mark - Helpers
 
 - (void)startAdvertisingBeacon {
-    if(self.peripheralManager.isAdvertising) return;
+    if (self.selectedMajorId == nil) return;
     if (self.peripheralManager.state != CBPeripheralManagerStatePoweredOn) {
         NSLog(@"turnOnAdvertising: Peripheral manager is off.");
         return;
     }
+
+    [self stopAdvertisingBeacon];
     
     NSUUID *proximityUUID = [[NSUUID alloc] initWithUUIDString:@"8A216B41-DBC2-435C-9B3D-16AB00B369D3"];
     CLBeaconRegion *region = [[CLBeaconRegion alloc] initWithProximityUUID:proximityUUID
