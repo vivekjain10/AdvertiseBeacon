@@ -10,12 +10,15 @@
 
 @interface ViewController ()
 
+@property NSArray *beacons;
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self loadBeaconArray];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -27,18 +30,29 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return self.beacons.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ListPrototypeCell"
                                                             forIndexPath:indexPath];
-    cell.textLabel.text = @"1/1";
+    NSArray *selectedBeacon = self.beacons[indexPath.row];
+    NSNumber *majorId = selectedBeacon[0];
+    NSNumber *minorId = selectedBeacon[1];
+    
+    cell.textLabel.text = [NSString stringWithFormat:@"%@/%@", majorId, minorId];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+}
+
+- (void)loadBeaconArray {
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"beacons" ofType:@"json"];
+    NSString *jsonString = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error: nil];
+    self.beacons = [NSJSONSerialization JSONObjectWithData:[jsonString dataUsingEncoding:NSUTF8StringEncoding]
+                                                   options:kNilOptions error:nil];
 }
 
 @end

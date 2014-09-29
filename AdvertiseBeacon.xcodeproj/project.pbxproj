@@ -16,6 +16,7 @@
 		BDF822AD19D9A0AE0024F8D7 /* AdvertiseBeaconTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF822AC19D9A0AE0024F8D7 /* AdvertiseBeaconTests.m */; };
 		BDF822B719D9A26F0024F8D7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF822B619D9A26F0024F8D7 /* CoreLocation.framework */; };
 		BDF822B919D9A2760024F8D7 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF822B819D9A2760024F8D7 /* CoreBluetooth.framework */; };
+		BDF822BD19D9AAF60024F8D7 /* beacons.json in Resources */ = {isa = PBXBuildFile; fileRef = BDF822BB19D9AAF60024F8D7 /* beacons.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		BDF822AC19D9A0AE0024F8D7 /* AdvertiseBeaconTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdvertiseBeaconTests.m; sourceTree = "<group>"; };
 		BDF822B619D9A26F0024F8D7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		BDF822B819D9A2760024F8D7 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		BDF822BB19D9AAF60024F8D7 /* beacons.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = beacons.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 		BDF8228419D9A0AD0024F8D7 = {
 			isa = PBXGroup;
 			children = (
+				BDF822BA19D9AADE0024F8D7 /* Data */,
 				BDF822B819D9A2760024F8D7 /* CoreBluetooth.framework */,
 				BDF822B619D9A26F0024F8D7 /* CoreLocation.framework */,
 				BDF8228F19D9A0AE0024F8D7 /* AdvertiseBeacon */,
@@ -125,6 +128,14 @@
 				BDF822AB19D9A0AE0024F8D7 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BDF822BA19D9AADE0024F8D7 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				BDF822BB19D9AAF60024F8D7 /* beacons.json */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +221,7 @@
 				BDF8229C19D9A0AE0024F8D7 /* Main.storyboard in Resources */,
 				BDF822A119D9A0AE0024F8D7 /* LaunchScreen.xib in Resources */,
 				BDF8229E19D9A0AE0024F8D7 /* Images.xcassets in Resources */,
+				BDF822BD19D9AAF60024F8D7 /* beacons.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
