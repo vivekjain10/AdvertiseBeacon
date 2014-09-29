@@ -14,6 +14,8 @@
 		BDF8229E19D9A0AE0024F8D7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDF8229D19D9A0AE0024F8D7 /* Images.xcassets */; };
 		BDF822A119D9A0AE0024F8D7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDF8229F19D9A0AE0024F8D7 /* LaunchScreen.xib */; };
 		BDF822AD19D9A0AE0024F8D7 /* AdvertiseBeaconTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF822AC19D9A0AE0024F8D7 /* AdvertiseBeaconTests.m */; };
+		BDF822B719D9A26F0024F8D7 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF822B619D9A26F0024F8D7 /* CoreLocation.framework */; };
+		BDF822B919D9A2760024F8D7 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF822B819D9A2760024F8D7 /* CoreBluetooth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		BDF822A619D9A0AE0024F8D7 /* AdvertiseBeaconTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdvertiseBeaconTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDF822AB19D9A0AE0024F8D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDF822AC19D9A0AE0024F8D7 /* AdvertiseBeaconTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdvertiseBeaconTests.m; sourceTree = "<group>"; };
+		BDF822B619D9A26F0024F8D7 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		BDF822B819D9A2760024F8D7 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDF822B919D9A2760024F8D7 /* CoreBluetooth.framework in Frameworks */,
+				BDF822B719D9A26F0024F8D7 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +69,8 @@
 		BDF8228419D9A0AD0024F8D7 = {
 			isa = PBXGroup;
 			children = (
+				BDF822B819D9A2760024F8D7 /* CoreBluetooth.framework */,
+				BDF822B619D9A26F0024F8D7 /* CoreLocation.framework */,
 				BDF8228F19D9A0AE0024F8D7 /* AdvertiseBeacon */,
 				BDF822A919D9A0AE0024F8D7 /* AdvertiseBeaconTests */,
 				BDF8228E19D9A0AE0024F8D7 /* Products */,

@@ -5,6 +5,36 @@
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "BDF8228C19D9A0AE0024F8D7"
+               BuildableName = "AdvertiseBeacon.app"
+               BlueprintName = "AdvertiseBeacon"
+               ReferencedContainer = "container:AdvertiseBeacon.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "BDF822A519D9A0AE0024F8D7"
+               BuildableName = "AdvertiseBeaconTests.xctest"
+               BlueprintName = "AdvertiseBeaconTests"
+               ReferencedContainer = "container:AdvertiseBeacon.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
    </BuildAction>
    <TestAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
@@ -12,7 +42,26 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "BDF822A519D9A0AE0024F8D7"
+               BuildableName = "AdvertiseBeaconTests.xctest"
+               BlueprintName = "AdvertiseBeaconTests"
+               ReferencedContainer = "container:AdvertiseBeacon.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "BDF8228C19D9A0AE0024F8D7"
+            BuildableName = "AdvertiseBeacon.app"
+            BlueprintName = "AdvertiseBeacon"
+            ReferencedContainer = "container:AdvertiseBeacon.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
@@ -23,6 +72,15 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "BDF8228C19D9A0AE0024F8D7"
+            BuildableName = "AdvertiseBeacon.app"
+            BlueprintName = "AdvertiseBeacon"
+            ReferencedContainer = "container:AdvertiseBeacon.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -32,6 +90,15 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "BDF8228C19D9A0AE0024F8D7"
+            BuildableName = "AdvertiseBeacon.app"
+            BlueprintName = "AdvertiseBeacon"
+            ReferencedContainer = "container:AdvertiseBeacon.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
